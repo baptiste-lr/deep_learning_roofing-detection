@@ -29,8 +29,8 @@ deep_learning_roofing-detection/
 ## Jeu de Données
 
 ### Description
-- **Images** : Images satellites en format GeoTIFF (ex: 3 bandes RGB ou multispectrales).
-- **Masques** : Masques binaires (1 = bâtiment, 0 = fond) au même format et résolution que les images.
+- **Images** : Images satellites Pléiades THRS 50cm de résolution en format GeoTIFF (4 bandes RVB et PIR et 10 néo canaux C3, L, NDVI, MSAVI, MNDWI, ExG, BII, UAI, Texture_R_3x3, Texture_PIR_3x3).
+- **Masques** : Masques binaires (1 = bâtiment, 0 = fond) au même format et résolution que les images (Réalisation du masque bianire dnas mon dernier reposit : https://github.com/baptiste-lr/Classification_XGBoost) Le masque est issus de l'extraction des classes habitations de la classification produite.
 
 ### Organisation
 - Les images et masques doivent être placés dans `data/images/` et `data/masks/` respectivement.
@@ -118,33 +118,3 @@ Le script `postproc_infer.py` permet de :
 - Métriques calculées : IoU (Intersection over Union), F1-score.
 
 ---
-
-## Exemple de Code
-
-### Charger le modèle
-```python
-from model import get_unetpp_model
-model = get_unetpp_model(in_channels=3, num_classes=1)
-```
-
-### Entraînement
-```python
-from train_script import train
-train(model, data_dir="./data/", epochs=50)
-```
-
-### Inférence
-```python
-from inference_script_image_sat import predict
-predict(model, image_path="data/images/image_001.tif", output_dir="./results/")
-```
-
----
-
-## Contribuer
-Les contributions sont les bienvenues ! Ouvre une issue ou une pull request pour toute amélioration.
-
----
-
-## Licence
-Ce projet est sous licence MIT. Voir [LICENSE](LICENSE) pour plus de détails.
