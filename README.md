@@ -12,14 +12,18 @@ deep_learning_roofing-detection/
 │   ├── images/       # Images satellites d'entrée (format GeoTIFF)
 │   └── masks/        # Masques de vérité terrain (format GeoTIFF)
 ├── scripts/
-│   ├── train_script.py          # Script d'entraînement du modèle
-│   ├── inference_script_imagettes.py  # Script d'inférence sur des imagettes
-│   ├── inference_script_image_sat.py  # Script d'inférence sur des images satellites complètes
-│   ├── utils.py                # Fonctions utilitaires (visualisation, post-traitement)
-│   ├── dataset.py              # Préparation et chargement des données
-│   ├── model.py                # Définition du modèle UNet++
-│   ├── losses.py               # Fonctions de perte personnalisées
-│   └── postproc_infer.py       # Post-traitement des prédictions
+│   ├── preparation
+│        ├── prepare_data.py          # Script de préparation des données
+│        ├── inspect_data.py         # Script d'inspection des données
+│   ├── modèle
+│       ├── train_script.py          # Script d'entraînement du modèle
+│       ├── inference_script_imagettes.py  # Script d'inférence sur des imagettes
+│       ├── inference_script_image_sat.py  # Script d'inférence sur des images satellites complètes
+│       ├── utils.py                # Fonctions utilitaires (visualisation, post-traitement)
+│       ├── dataset.py              # Préparation et chargement des données
+│       ├── model.py                # Définition du modèle UNet++
+│       ├── losses.py               # Fonctions de perte personnalisées
+│       └── postproc_infer.py       # Post-traitement des prédictions
 ├── README.md
 └── requirements.txt
 ```
