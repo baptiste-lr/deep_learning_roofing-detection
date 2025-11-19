@@ -21,10 +21,10 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 # =================================================================
 #  CONFIGURATION & CHEMINS 
 # =================================================================
-PROJECT_ROOT = Path("/home/baptistedlb/Documents/Stage_IRD/Baptiste_Deep/Deep_learning_codes/codes")
+PROJECT_ROOT = Path("chemin_du_projet")
 
 # 🎯 ADAPTATION 1 : CHEMIN DE BASE DES DONNÉES (11 bandes, 256x256, SANS RVB)
-DATA_ROOT_MULTI_SOURCE = PROJECT_ROOT / "dataset_source_11bands_256x256_split_balanced_no_rgb" 
+DATA_ROOT_MULTI_SOURCE = PROJECT_ROOT / "dataset_source_15bands_256x256_split_balanced_with_rgb" 
 
 SCRIPTS_DIR  = PROJECT_ROOT 
 RUNS_BASE_DIR = PROJECT_ROOT / "Outputs/runs"
@@ -32,12 +32,12 @@ PREDICT_HIGH_ROOF_TILES_DIR = PROJECT_ROOT / "Outputs/predict_high_roof_tiles"
 STATS_PATH = PROJECT_ROOT / "preparation_data" / "mean_std.json" 
 BASE_DATA_DIR = Path("/home/baptistedlb/Documents/Stage_IRD/Baptiste_Deep/Deep_learning_codes/data/data_sat")
 REFERENCE_IMAGE_PATHS = [
-    BASE_DATA_DIR / "baptiste_extraction_rognée_validated.tif",
-    BASE_DATA_DIR / "marc_extraction_rognée_validated.tif"
+    BASE_DATA_DIR / "bimage_sat",
+    BASE_DATA_DIR / "image_sat"
 ]
 
-# 🎯 ADAPTATION 2 : Nombre de canaux attendus (11 : 14 bandes initiales - 3 bandes RVB)
-IN_CHANNELS = 11 
+# 🎯 ADAPTATION 2 : Nombre de canaux attendus 14
+IN_CHANNELS = 14 
 
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.append(str(SCRIPTS_DIR))
