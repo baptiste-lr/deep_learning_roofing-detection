@@ -27,7 +27,7 @@ from matplotlib.colors import Normalize
 # 🚩 CONFIGURATION & CHEMINS (MAJ)
 # =================================================================
 
-PROJECT_ROOT = Path("/home/baptistedlb/Documents/Stage_IRD/Baptiste_Deep/Deep_learning_codes/codes")
+PROJECT_ROOT = Path("chemin_du_projet")
 SCRIPTS_DIR  = PROJECT_ROOT 
 
 # 🚨 CHEMIN DE BASE DES DONNÉES (Non équilibré)
@@ -38,8 +38,8 @@ PREDICT_HIGH_ROOF_TILES_DIR = PROJECT_ROOT / "Outputs/predict_high_roof_tiles"
 STATS_PATH = PROJECT_ROOT / "preparation_data" / "mean_std.json" 
 BASE_DATA_DIR = Path("/home/baptistedlb/Documents/Stage_IRD/Baptiste_Deep/Deep_learning_codes/data/data_sat")
 REFERENCE_IMAGE_PATHS = [
-    BASE_DATA_DIR / "baptiste_extraction_rognée_validated.tif",
-    BASE_DATA_DIR / "marc_extraction_rognée_validated.tif"
+    BASE_DATA_DIR / "image_sat",
+    BASE_DATA_DIR / "image_sat"
 ]
 
 METRICS_OUTPUT_DIR = PREDICT_HIGH_ROOF_TILES_DIR / "inference_metrics" 
