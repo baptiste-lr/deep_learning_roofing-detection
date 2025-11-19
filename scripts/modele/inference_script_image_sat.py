@@ -31,29 +31,29 @@ except ImportError:
 # 🚩 CONFIGURATION & CHEMINS
 # =================================================================
 
-PROJECT_ROOT = Path("/home/baptistedlb/Documents/Stage_IRD/Baptiste_Deep/Deep_learning_codes/codes")
+PROJECT_ROOT = Path("chemin_du_projet")
 SCRIPTS_DIR  = PROJECT_ROOT 
 RUNS_BASE_DIR = PROJECT_ROOT / "Outputs/runs"
 PREDICT_HIGH_ROOF_TILES_DIR = PROJECT_ROOT / "Outputs/predict_high_roof_tiles" 
 STATS_PATH = PROJECT_ROOT / "preparation_data" / "mean_std.json" 
 # Répertoire des images satellites brutes/validées
-BASE_DATA_DIR = Path("/home/baptistedlb/Documents/Stage_IRD/Baptiste_Deep/Deep_learning_codes/data/data_sat")
+BASE_DATA_DIR = Path("image_sat")
 
 # 🎯 NOUVEAU CHEMIN POUR LES MASQUES DE VÉRITÉ TERRAIN (GT)
-GT_BASE_DIR = Path("/home/baptistedlb/Documents/Stage_IRD/Baptiste_Deep/Deep_learning_codes/data/images_binaire")
+GT_BASE_DIR = Path("masques")
 
 # 🎯 LISTE DES IMAGES CIBLES À PRÉDIRE 
 IMAGES_TO_PREDICT = [
-    "baptiste_extraction_rognée_validated.tif",
-    "marc_extraction_rognée_validated.tif",
+    "image_sat",
+    ".image_sat",
 ]
 
 # 🎯 ADAPTATION 1 : Nombre de canaux attendus par le modèle (11)
-IN_CHANNELS_MODEL = 11 
+IN_CHANNELS_MODEL = 15 
 
 # 🎯 ADAPTATION 2 : Indices des bandes à lire (1-based pour rasterio).
 # On lit les bandes de 4 à 14 (11 bandes au total, SANS RVB).
-BAND_INDICES_TO_READ = list(range(4, 15)) 
+BAND_INDICES_TO_READ = list(range(1, 15)) 
 # Vérification de sécurité: la liste devrait contenir 11 indices
 if len(BAND_INDICES_TO_READ) != IN_CHANNELS_MODEL:
     print(f"❌ ERREUR DE CONFIGURATION: Indices de bandes à lire ({len(BAND_INDICES_TO_READ)}) ne correspondent pas aux canaux du modèle ({IN_CHANNELS_MODEL}). Vérifiez BAND_INDICES_TO_READ.")
