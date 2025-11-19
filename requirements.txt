@@ -1,0 +1,10 @@
+torch
+torchvision
+numpy
+rasterio
+geopandas
+shapely
+matplotlib
+scikit-learn
+segmentation-models-pytorch
+tqdm
