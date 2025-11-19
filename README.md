@@ -1,6 +1,7 @@
 # Détection de Bâtiments par Segmentation Sémantique avec UNet++
 
 Ce dépôt contient une implémentation complète d'un modèle **UNet++** pour la détection de bâtiments sur des images satellites. Le projet inclut la préparation des données, l'entraînement, l'inférence et le post-traitement.
+Rapport de mémoire du sujet : https://drive.google.com/file/d/1PACmAhu0Kk-4m--K_XtfAdL8Xj-sMu5g/view?usp=sharing
 
 ---
 
