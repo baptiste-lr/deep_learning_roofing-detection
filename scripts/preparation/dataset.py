@@ -447,15 +447,15 @@ def stats_split(base_path, min_toiture_pct=20):
 
 if __name__ == "__main__":
     # --- Configuration ---
-    image_dir_base = "/home/baptistedlb/Documents/Stage_IRD/Baptiste_Deep/Deep_learning_codes/data/data_sat"
-    mask_dir_base = "/home/baptistedlb/Documents/Stage_IRD/Baptiste_Deep/Deep_learning_codes/data/images_binaire"
+    image_dir_base = "chemin_image_sat"
+    mask_dir_base = "chemin_masque_binaire"
     images_to_process = [
-        "baptiste_extraction_rognée_validated.tif",
-        "marc_extraction_rognée_validated.tif"
+        "image_sat",
+        "image_sat"
     ]
     masks_to_process = [
-        "baptiste_mask.tif",
-        "marc_mask.tif"
+        "mask",
+        "mask"
     ]
     
     # 🎯 ADAPTATION 6 : Nouvelle taille de tuile (256x256)
